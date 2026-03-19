@@ -1,0 +1,17 @@
+{
+  "timezone": "Asia/Shanghai",
+  "run_only_trading_hours": true,
+  "symbols": [
+    {
+      "name": "三六零",
+      "code": "601360",
+      "market": "SH"
+    }
+  ],
+  "rules": {
+    "volume_ratio_watch": 1.5,
+    "volume_ratio_buy": 2.0,
+    "change_pct_watch": 2.0,
+    "change_pct_sell": -3.0
+  }
+}
