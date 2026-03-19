@@ -81,7 +81,7 @@ def main():
         try:
             if "代码" not in df.columns:
                 item["status"] = "error"
-                item["reasons"].append("行情表缺少"代码"列")
+                item["reasons"].append("行情表缺少'代码'列")
                 results.append(item)
                 continue
             
