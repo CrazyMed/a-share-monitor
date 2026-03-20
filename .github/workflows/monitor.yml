@@ -2,7 +2,10 @@ name: A Share Monitor
 
 on:
   schedule:
-      - cron: "*/30 * * * *"
+    # 北京时间 9:30-11:30（UTC 01:30-03:30）
+    - cron: "30,0 1,2,3 * * *"
+    # 北京时间 13:00-15:00（UTC 05:00-07:00）
+    - cron: "0,30 5,6,7 * * *"
   workflow_dispatch:
 
 permissions:
@@ -14,21 +17,21 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-      
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      
+
       - name: Install packages
         run: |
           python -m pip install --upgrade pip
           pip install akshare pandas
-      
+
       - name: Run monitor script
         run: |
           python scripts/monitor.py
-      
+
       - name: Commit report/latest.json
         run: |
           git config user.name "github-actions[bot]"
