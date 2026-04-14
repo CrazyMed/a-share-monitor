@@ -1,5 +1,20 @@
 {
-  "timestamp": "2026-04-14T12:10:24.746068+08:00",
-  "status": "skipped_non_trading_hours",
-  "items": []
+  "timestamp": "2026-04-14T14:52:21.729520+08:00",
+  "status": "ran",
+  "items": [
+    {
+      "name": "三六零",
+      "code": "601360",
+      "market": "SH",
+      "status": "ok",
+      "price": 10.97,
+      "change_pct": 0.46,
+      "volume": 697859.0,
+      "volume_ratio": 0.87,
+      "signal": "HOLD",
+      "reasons": [
+        "未触发任何规则"
+      ]
+    }
+  ]
 }
